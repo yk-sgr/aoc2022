@@ -1,11 +1,5 @@
 const input = await Deno.readTextFile("input.txt");
 
-interface Shape {
-  letters: string[];
-  score: number;
-  defeats: string[];
-}
-
 const shapes = [
   {
     letters: ["A", "X"],
@@ -25,7 +19,7 @@ const shapes = [
 ];
 
 
-const shapeByLetter = (letter: string): Shape => {
+const shapeByLetter = (letter: string) => {
   return shapes.find((shape) => shape.letters.includes(letter))!;
 }
 
